@@ -1,0 +1,2 @@
+
+\i '../schemas/init.sql'
