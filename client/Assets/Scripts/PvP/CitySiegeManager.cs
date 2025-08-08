@@ -103,7 +103,7 @@ namespace LegendsOfTianming.Core
                     position = catapultPositions[i].position,
                     isOperational = true,
                     cooldown = 0f,
-                    operator = null
+                    operatorPlayer = null
                 };
                 catapults.Add(catapult);
                 
@@ -200,7 +200,7 @@ namespace LegendsOfTianming.Core
             {
                 catapult.isOperational = true;
                 catapult.cooldown = 0f;
-                catapult.operator = null;
+                catapult.operatorPlayer = null;
             }
         }
 
@@ -253,9 +253,9 @@ namespace LegendsOfTianming.Core
                 
                 foreach (var catapult in catapults)
                 {
-                    if (catapult.operator == player)
+                    if (catapult.operatorPlayer == player)
                     {
-                        catapult.operator = null;
+                        catapult.operatorPlayer = null;
                         break;
                     }
                 }
@@ -338,7 +338,7 @@ namespace LegendsOfTianming.Core
             if (catapultId < 0 || catapultId >= catapults.Count) return false;
             
             var catapult = catapults[catapultId];
-            return catapult.isOperational && catapult.operator == null && attackers.Contains(player);
+            return catapult.isOperational && catapult.operatorPlayer == null && attackers.Contains(player);
         }
 
         public void UseCatapult(GameObject player, int catapultId, Vector3 targetPosition)
@@ -348,7 +348,7 @@ namespace LegendsOfTianming.Core
             var catapult = catapults[catapultId];
             if (catapult.cooldown > 0f) return;
             
-            catapult.operator = player;
+            catapult.operatorPlayer = player;
             catapult.cooldown = 30f; // 30 second cooldown
             
             FireCatapult(catapult, targetPosition);
@@ -521,7 +521,7 @@ namespace LegendsOfTianming.Core
         public Vector3 position;
         public bool isOperational;
         public float cooldown;
-        public GameObject operator;
+        public GameObject operatorPlayer;
     }
 
     public class SiegeGateComponent : MonoBehaviour
