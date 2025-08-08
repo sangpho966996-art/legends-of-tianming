@@ -36,7 +36,7 @@ namespace LegendsOfTianming.Core
                 {
                     className = "Azure Cloud Sect",
                     description = "Masters of swift swordplay and evasive techniques. Azure Cloud disciples excel in speed and counterattacks, flowing like wind through battle.",
-                    baseStats = new CharacterStats { strength = 12, agility = 16, intelligence = 10, vitality = 12 },
+                    baseStats = new CharacterStatsData { strength = 12, agility = 16, intelligence = 10, vitality = 12 },
                     startingSkills = new List<string> { "swift_strike", "cloud_step", "flowing_counter", "wind_blade" },
                     weaponType = "Sword",
                     playstyle = "Fast, evasive, counterattack-focused"
@@ -45,7 +45,7 @@ namespace LegendsOfTianming.Core
                 {
                     className = "Iron Bell Sect",
                     description = "Wielders of heavy staffs and masters of crowd control. Iron Bell monks use powerful strikes and stunning techniques to dominate the battlefield.",
-                    baseStats = new CharacterStats { strength = 14, agility = 10, intelligence = 12, vitality = 14 },
+                    baseStats = new CharacterStatsData { strength = 14, agility = 10, intelligence = 12, vitality = 14 },
                     startingSkills = new List<string> { "iron_sweep", "bells_resonance", "staff_vault", "earth_shaker" },
                     weaponType = "Staff",
                     playstyle = "Strong, defensive, crowd control"
@@ -244,7 +244,7 @@ namespace LegendsOfTianming.Core
     {
         public string className;
         public string description;
-        public CharacterStats baseStats;
+        public CharacterStatsData baseStats;
         public List<string> startingSkills;
         public string weaponType;
         public string playstyle;

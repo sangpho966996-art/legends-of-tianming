@@ -41,7 +41,7 @@ namespace LegendsOfTianming.Core
             RecalculateStats();
         }
 
-        public void Initialize(CharacterStats baseStats)
+        public void Initialize(CharacterStatsData baseStats)
         {
             strength = baseStats.strength;
             agility = baseStats.agility;

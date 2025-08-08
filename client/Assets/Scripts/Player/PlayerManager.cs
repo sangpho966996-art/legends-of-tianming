@@ -162,13 +162,13 @@ namespace LegendsOfTianming.Core
         public string characterClass;
         public int level;
         public long experience;
-        public CharacterStats stats;
+        public CharacterStatsData stats;
         public Vector3 position;
         public string region;
     }
 
     [System.Serializable]
-    public class CharacterStats
+    public class CharacterStatsData
     {
         public int strength = 10;
         public int agility = 10;
