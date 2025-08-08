@@ -169,7 +169,8 @@ namespace LegendsOfTianming.Core
         Common,
         Uncommon,
         Rare,
-        Epic
+        Epic,
+        Legendary
     }
 
     public enum StatType
